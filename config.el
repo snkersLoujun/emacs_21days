@@ -88,24 +88,24 @@
 (require 'init-packages)
 
 ;;modeline上显示我的所有的按键和执行的命令
-(package-install 'keycast)
+(use-package keycast :ensure t)
 (keycast-mode t)
 
-(package-install 'vertico)
+(use-package vertico :ensure t)
 (vertico-mode t)
 
-(package-install 'orderless)
+(use-package orderless :ensure t)
 (setq completion-styles '(orderless))
 
-(package-install 'marginalia)
+(use-package marginalia :ensure t)
 (marginalia-mode t)
 
-(package-install 'embark)
+(use-package embark :ensure t)
 (global-set-key (kbd "C-;") 'embark-act)
 
 (setq prefix-help-command 'embark-prefix-help-command)
 
-(package-install 'consult)
+(use-package consult :ensure t)
 ;;swiper
 (global-set-key (kbd "C-s") 'consult-line)
 (global-set-key (kbd "M-s i") 'consult-imenu)
@@ -182,8 +182,8 @@ Other buffer group by `awesome-tab-get-group-name' with project name."
 
 ;;hello2
 
-(package-install 'embark-consult)
-(package-install 'wgrep)
+(use-package embark-consult :ensure t)
+(use-package wgrep :ensure t)
 (setq wgrep-auto-save-buffer t)
 
 (eval-after-load 'consult
@@ -260,7 +260,7 @@ Supports exporting consult-grep to wgrep, file to wdeired, and consult-location 
         consult-async-input-debounce 0.1)
     ))
 
-(package-install 'pyim)
+(use-package pyim)
 
 (defun eh-orderless-regexp (orig_func component)
     (let ((result (funcall orig_func component)))
@@ -286,7 +286,7 @@ Supports exporting consult-grep to wgrep, file to wdeired, and consult-location 
 
 (global-hl-line-mode 1)
 
-;;(package-install 'monokai-theme)
+;;(use-package monokai-theme)
 ;;(load-theme 'monokai 1)
 (package-install 'doom-themes)
 (load-theme 'doom-one 1)

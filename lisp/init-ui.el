@@ -24,9 +24,11 @@
 
 (global-hl-line-mode 1)
 
-;;(package-install 'monokai-theme)
+;;(use-package monokai-theme)
 ;;(load-theme 'monokai 1)
-(package-install 'doom-themes)
+(use-package doom-themes)
 (load-theme 'doom-one 1)
+
+
 
 (provide 'init-ui)

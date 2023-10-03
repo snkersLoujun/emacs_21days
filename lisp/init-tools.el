@@ -32,7 +32,7 @@ Other buffer group by `awesome-tab-get-group-name' with project name."
      (awesome-tab-get-group-name (current-buffer))))))
 
 
-(package-install 'pyim)
+(use-package pyim)
 
 (defun eh-orderless-regexp (orig_func component)
     (let ((result (funcall orig_func component)))
@@ -53,8 +53,10 @@ Other buffer group by `awesome-tab-get-group-name' with project name."
 (add-hook 'minibuffer-exit-hook 'disable-py-search)
 
 ;;modeline上显示我的所有的按键和执行的命令
-(package-install 'keycast)
+(use-package keycast
+  :ensure t)
 (require 'keycast)
+(add-to-list 'global-mode-string '("" keycast-mode-line))
 (keycast-mode t)
 
 

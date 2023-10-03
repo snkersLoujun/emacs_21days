@@ -1,0 +1,12 @@
+;;; -*- coding: utf-8 -*-
+(("c:/Users/luojun/AppData/Roaming/.emacs.d/init.el" . 321)
+ ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-basic.el" . 1985)
+ ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-packages.el" . 612)
+ ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-keybindings.el" . 1250)
+ ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-tools.el" . 1868)
+ ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-ui.el" . 588)
+ ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/"
+  (dired-filename . "c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-ui.el"))
+ ("c:/Users/luojun/AppData/Roaming/.emacs.d/elpa/shrink-path-20190208.1335/shrink-path-autoloads.el" . 498)
+ ("c:/Users/luojun/AppData/Roaming/.emacs.d/elpa/f-20230823.1159/f-autoloads.el" . 444)
+ ("c:/Users/luojun/AppData/Roaming/.emacs.d/elpa/s-20220902.1511/s-autoloads.el" . 428))

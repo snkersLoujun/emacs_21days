@@ -1,16 +1,16 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+
 (require 'init-basic)
 (require 'init-funcs)
-
 (require 'init-packages)
 
+(require 'init-completion)
+(require 'init-tools)
 (require 'init-ui)
 
-(require 'init-completion)
 
-(require 'init-tools)
 
 (require 'init-keybindings)
 

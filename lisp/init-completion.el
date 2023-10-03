@@ -13,21 +13,21 @@
 
 
 
-(package-install 'vertico)
+(use-package vertico)
 (vertico-mode t)
 
-(package-install 'orderless)
+(use-package orderless)
 (setq completion-styles '(orderless))
 
-(package-install 'marginalia)
+(use-package marginalia)
 (marginalia-mode t)
 
-(package-install 'embark)
+(use-package embark)
 
 
 (setq prefix-help-command 'embark-prefix-help-command)
 
-(package-install 'consult)
+(use-package consult)
 
 (add-to-list 'process-coding-system-alist '("es" gbk . gbk))
 (setq consult-locate-args (encode-coding-string "es.exe -i -p -r" 'gbk))
@@ -45,8 +45,8 @@
     ))
 
 
-(package-install 'embark-consult)
-(package-install 'wgrep)
+(use-package embark-consult)
+(use-package wgrep)
 (setq wgrep-auto-save-buffer t)
 
 (eval-after-load 'consult
