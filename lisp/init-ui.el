@@ -30,5 +30,4 @@
 (load-theme 'doom-one 1)
 
 
-
 (provide 'init-ui)
