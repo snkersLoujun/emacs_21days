@@ -1,7 +1,8 @@
 (require 'package)
-(setq package-archives '(("gnu"    . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-                         ("nongnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
-                         ("melpa"  . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+(setq package-archives '(("gnu"   . "http://1.15.88.122/gnu/")
+("nongnu" . "http://1.15.88.122/nongnu/")
+
+			 ("melpa" . "http://1.15.88.122/melpa/")))
 (package-initialize) ;; You might already have this line
 
 

@@ -1,13 +1,15 @@
-;;; -*- coding: utf-8 -*-
-(("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-org.el" . 323)
- ("c:/Users/luojun/AppData/Roaming/.emacs.d/init.el" . 217)
- ("c:/Users/luojun/AppData/Roaming/gtd.org" . 21)
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("c:/Users/luojun/AppData/Roaming/.emacs.d/init.el" . 341)
+ ("c:/Users/luojun/AppData/Roaming/test.cpp" . 248)
+ ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-tools.el" . 2301)
+ ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-packages.el" . 724)
+ ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-ui.el" . 762)
+ ("d:/llife_log/Octorber_log.org" . 159)
+ ("c:/Users/luojun/AppData/Roaming/gtd.org" . 529)
+ ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-org.el" . 804)
  ("c:/Users/luojun/AppData/Roaming/.emacs.d/elpa/org-9.6.9/org-loaddefs.el" . 130648)
- ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-packages.el" . 342)
  ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-basic.el" . 1985)
  ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-keybindings.el" . 1250)
- ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-tools.el" . 1868)
- ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-ui.el" . 588)
  ("c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/"
   (dired-filename . "c:/Users/luojun/AppData/Roaming/.emacs.d/lisp/init-ui.el"))
  ("c:/Users/luojun/AppData/Roaming/.emacs.d/elpa/shrink-path-20190208.1335/shrink-path-autoloads.el" . 498)

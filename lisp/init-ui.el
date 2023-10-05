@@ -1,4 +1,4 @@
-(global-linum-mode 1)
+(global-display-line-numbers-mode t)    ;修改成这个来显示行号，性能更好
 
 (setq inhibit-startup-screen t)
 
@@ -29,5 +29,11 @@
 (use-package doom-themes)
 (load-theme 'doom-one 1)
 
-
+(use-package doom-modeline
+  :ensure t
+  :custom-face
+(mode-line ((t (:height 0.9))))
+(mode-line-inactive ((t (:height 0.9))))
+  :init
+  (doom-modeline-mode t))
 (provide 'init-ui)
