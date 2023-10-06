@@ -84,9 +84,12 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "!" 'shell-command
     "SPC" 'execute-extended-command
     "'" 'vertico-repeat
+    "v" 'er/expand-region
     "+" 'text-scale-increase
     "-" 'text-scale-decrease
     "u" 'universal-argument
+    "hc" 'zilongshanren/clearn-highlight
+    "hH" 'zilongshanren/highlight-dwim
     "hdf" 'describe-function
     "hdv" 'describe-variable
     "hdk" 'describe-key
@@ -152,6 +155,18 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
   :init
   (global-evil-matchit-mode 1))
 
+(use-package iedit
+  :ensure t
+  :init
+  (setq iedit-toggle-key-default nil)
+  :config
+  (define-key iedit-mode-keymap (kbd "M-h") 'iedit-restrict-function)
+  (define-key iedit-mode-keymap (kbd "M-i") 'iedit-restrict-current-line))
 
+(use-package evil-multiedit
+  :ensure t
+  :commands (evil-multiedit-default-keybinds)
+  :init
+  (evil-multiedit-default-keybinds))
 
 (provide 'init-evil)

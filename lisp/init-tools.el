@@ -76,4 +76,88 @@ Other buffer group by `awesome-tab-get-group-name' with project name."
     :default "c++"))
 
 (global-set-key (kbd "<f5>") 'quickrun)
+
+(defun my/search-project-for-symbol-at-point ()
+  (interactive)
+  (if (use-region-p)
+      (progn
+	(consult-ripgrep (project-root (project-current))
+			 (buffer-substring (region-beginning) (region-end))))))
+
+; do what i mean   dwim
+(defun zilongshanren/highlight-dwim ()
+  (interactive)
+  (if (use-region-p)
+      (progn
+        (highlight-frame-toggle)
+        (deactivate-mark))
+    (symbol-overlay-put)))
+
+(use-package expand-region
+  :config
+  (defadvice er/prepare-for-more-expansions-internal
+      (around helm-ag/prepare-for-more-expansions-internal activate)
+    ad-do-it
+    (let ((new-msg (concat (car ad-return-value)
+			   ", H to highlight in buffers"
+			   ", / to search in project, "
+			   "e iedit mode in functions"
+			   "f to search in files, "
+			   "b to search in opened buffers"))
+	  (new-bindings (cdr ad-return-value)))
+      (cl-pushnew
+       '("H" (lambda ()
+	       (interactive)
+	       (call-interactively
+		'zilongshanren/highlight-dwim)))
+       new-bindings)
+      (cl-pushnew
+       '("/" (lambda ()
+	       (interactive)
+	       (call-interactively
+		'my/search-project-for-symbol-at-point)))
+       new-bindings)
+      (cl-pushnew
+       '("e" (lambda ()
+	       (interactive)
+	       (call-interactively
+		'evil-multiedit-match-all)))
+       new-bindings)
+      (cl-pushnew
+       '("f" (lambda ()
+	       (interactive)
+	       (call-interactively
+		'find-file)))
+       new-bindings)
+      (cl-pushnew
+       '("b" (lambda ()
+	       (interactive)
+	       (call-interactively
+		'consult-line)))
+       new-bindings)
+      (setq ad-return-value (cons new-msg new-bindings)))))
+
+(defun zilongshanren/evil-quick-replace (beg end )
+    (interactive "r")
+    (when (evil-visual-state-p)
+      (evil-exit-visual-state)
+      (let ((selection (regexp-quote (buffer-substring-no-properties beg end))))
+	(setq command-string (format "%%s /%s//g" selection))
+	(minibuffer-with-setup-hook
+	    (lambda () (backward-char 2))
+	  (evil-ex command-string)))))
+
+
+(defun zilongshanren/clearn-highlight ()
+  (interactive)
+  (clear-highlight-frame)
+  (symbol-overlay-remove-all))
+
+(use-package symbol-overlay
+  :config
+  (define-key symbol-overlay-map (kbd "h") 'nil))
+
+
 (provide 'init-tools)
+
+
